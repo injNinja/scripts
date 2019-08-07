@@ -1,9 +1,0 @@
-<svg width="700" height="65" viewBox="0 0 700 65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
- <path id="path">
-		<animate attributeName="d" from="m0,50 h0" to="m0,50 h1100" dur="6.8s" begin="0s" fill="freeze"/>
-	</path>
-	<text font-size="80" font-family="Courier New" fill="hsl(138, 45%, 49%)">
-		<textPath xlink:href="#path">[~:/var/blog]$
-    </textPath>
-	</text>
-</svg>
