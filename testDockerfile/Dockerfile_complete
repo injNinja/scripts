@@ -1,0 +1,7 @@
+FROM alpine
+MAINTAINER alex@varslashblog
+
+ADD https://github.com/injNinja/scripts/blob/master/README.md /tmp
+RUN apk add --update --no-cache curl jq
+
+CMD ["sh"]
