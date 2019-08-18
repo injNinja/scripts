@@ -2,8 +2,8 @@ FROM alpine
 MAINTAINER alex@varslashblog
 
 ENV testfile=testJson.json
-WORKDIR /tmp
+VOLUME testVolume
+WORKDIR /testVolume
 ADD https://raw.githubusercontent.com/injNinja/scripts/master/testDockerfile/testJson.json .
 RUN apk add --update --no-cache curl jq
-VOLUME testVolume
-CMD jq -C '.' $testfile
+CMD ls -latr . && jq -C '.' $testfile
