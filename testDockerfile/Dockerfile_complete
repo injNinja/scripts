@@ -1,7 +1,9 @@
 FROM alpine
 MAINTAINER alex@varslashblog
 
-ADD https://github.com/injNinja/scripts/blob/master/README.md /tmp
+ENV testfile=testJson.json
+WORKDIR /tmp
+ADD https://raw.githubusercontent.com/injNinja/scripts/master/testDockerfile/testJson.json .
 RUN apk add --update --no-cache curl jq
-
-CMD ["sh"]
+VOLUME testVolume
+CMD jq -C '.' $testfile
